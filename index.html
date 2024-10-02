@@ -27,5 +27,19 @@
         <button id="completeButton">Finalizar</button>
     
         <p>Valor Total: R$ <span id="totalAmount">0.00</span></p>
+
+        <h2>PROGRESSÃO GEOMÉTRICA</h2>
+        <input type="number" name="inicio" id="inicio" placeholder="Valor Inicial">
+        <input type="number" name="passo" id="passo" placeholder="Passo">
+        <input type="number" name="repeticoes" id="repeticoes" placeholder="Repetições">
+        <button onclick="calcProgGeom()">Calcular</button>
+        <div id="progGeom"></div>
+        
+        <h2>PROGRESSÃO ARITMÉTICA</h2>
+        <input type="number" id="inputPrimeiroTermo" placeholder="Primeiro Termo">
+        <input type="number" id="inputRazao" placeholder="Razão">
+        <input type="number" id="inputTermos" placeholder="Número de Termos">
+        <button onclick="calcularPA()">Calcular PA</button>
+        <div id="divResultadoPA"></div>
     </body>
 </main>
