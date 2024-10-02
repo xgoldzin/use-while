@@ -86,3 +86,51 @@ function calcularPA() {
 
     document.getElementById("divResultadoPA").innerHTML = resultadoPA; // Exibe os termos da PA
 }
+
+function calcProgGeom() {
+    let valorInicial = Number(document.getElementById("inicio").value);
+    let multiplicador = Number(document.getElementById("passo").value);
+    let numRepeticoes = Number(document.getElementById("repeticoes").value);
+
+    let resultado = valorInicial; // O primeiro termo é o valor inicial
+    document.getElementById("progGeom").innerHTML = ""; // Limpa resultados anteriores
+
+    let contador = 0; // Inicializa o contador
+    do {
+        document.getElementById("progGeom").innerHTML += `<p>${resultado}</p>`;
+        resultado *= multiplicador; // Calcula o próximo termo da PG
+        contador++; // Incrementa o contador
+    } while (contador < numRepeticoes);
+}
+
+function calcularPG() {
+    let valorInicial = parseFloat(document.getElementById('valorInicial').value);
+    let fator = parseFloat(document.getElementById('fator').value);
+    let quantidade = parseInt(document.getElementById('quantidade').value);
+    let resultado = '';
+    let i = 0;
+
+    do {
+        resultado += valorInicial + '<br>';
+        valorInicial *= fator;
+        i++;
+    } while (i < quantidade);
+
+    document.getElementById('resultadoPG').innerHTML = resultado;
+}
+
+function calcularPA2() {
+    let valorInicial = parseFloat(document.getElementById('inputValorInicial').value);
+    let diferenca = parseFloat(document.getElementById('inputDiferenca').value);
+    let quantidade = parseInt(document.getElementById('inputQuantidade').value);
+    let resultado = '';
+    let contador = 0;
+
+    do {
+        resultado += valorInicial + '<br>';
+        valorInicial += diferenca;
+        contador++;
+    } while (contador < quantidade);
+
+    document.getElementById('divResultadoPA2').innerHTML = resultado;
+}
